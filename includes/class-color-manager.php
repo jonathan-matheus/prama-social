@@ -16,8 +16,9 @@ class Color_Manager
         return [
             'primary' => '#F1F5F9',
             'secondary' => '#F1F5F9',
-            'background' => '#f8fafc',
+            'background' => '#184CDA',
             'text-primary' => '#B1B9C4',
+            'text-secondary' => '#000000',
         ];
     }
 

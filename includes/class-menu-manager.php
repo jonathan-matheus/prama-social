@@ -15,6 +15,7 @@ class Menu_Manager
     {
         register_nav_menus([
             'header-menu' => __('Header Menu', 'pragmasocial'),
+            'primary-menu' => __('Primary Menu', 'pragmasocial'),
         ]);
     }
 }
