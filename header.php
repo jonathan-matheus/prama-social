@@ -50,7 +50,7 @@ $css_url = get_template_directory_uri() . '/src/output.css';
                 ?>
             </div>
 
-            <div class="text-[<?= get_theme_mod('theme_color_text-secondary', '#fff'); ?>]">
+            <div class="text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>]">
                 <?php
                 wp_nav_menu([
                     'theme_location' => 'primary-menu',

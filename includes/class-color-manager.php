@@ -17,8 +17,10 @@ class Color_Manager
             'primary' => '#F1F5F9',
             'secondary' => '#F1F5F9',
             'background' => '#184CDA',
+            'background-alt' => '#F8FAFC',
             'text-primary' => '#B1B9C4',
             'text-secondary' => '#000000',
+            'text-tertiary' => '#FFFFFF',
         ];
     }
 

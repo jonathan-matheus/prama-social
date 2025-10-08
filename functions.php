@@ -6,6 +6,7 @@ require_once get_template_directory() . '/includes/class-color-manager.php';
 require_once get_template_directory() . '/includes/class-contact-manager.php';
 require_once get_template_directory() . '/includes/class-theme-options.php';
 require_once get_template_directory() . '/includes/class-theme-widgets.php';
+require_once get_template_directory() . '/includes/class-custom-post.php';
 
 function theme_setup()
 {
@@ -26,6 +27,9 @@ function theme_setup()
 
     $theme_widgets = new Theme_Widgets();
     $theme_widgets->init();
+
+    $custom_post = new Custom_Post();
+    $custom_post->init();
 }
 
 theme_setup();

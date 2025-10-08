@@ -18,7 +18,7 @@ class Theme_Widgets
             'description' => __('Widgets in this area will be shown on the services section.', 'pragmasocial'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget' => '</div>',
-            'before_title' => '<h3 class="text-4xl">',
+            'before_title' => '<h3 class="text-4xl font-semibold text-[' . get_theme_mod('theme_color_text-secondary', '#000000') . ']">',
             'after_title' => '</h3>'
         ]);
 
@@ -49,7 +49,7 @@ class PS_Services_Intro_Widget extends WP_Widget
         }
 
         if (!empty($text)) {
-            echo '<p class="text-xl max-w-5xl pt-2">' . esc_html($text) . '</p>';
+            echo '<p class="text-xl max-w-5xl pt-2 text-[' . get_theme_mod('theme_color_text-primary', '#2d3748') . ']">' . esc_html($text) . '</p>';
         }
 
         echo $args['after_widget'];
