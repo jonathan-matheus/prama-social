@@ -22,6 +22,16 @@ class Theme_Widgets
             'after_title' => '</h3>'
         ]);
 
+        register_sidebar([
+            'name' => __('News and updates', 'pragmasocial'),
+            'id' => 'news-updates',
+            'description' => __('Widgets in this area will be shown on the news and updates section.', 'pragmasocial'),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3 class="text-4xl font-semibold text-[' . get_theme_mod('theme_color_text-secondary', '#000000') . ']">',
+            'after_title' => '</h3>'
+        ]);
+
         register_widget('PS_Services_Intro_Widget');
     }
 }
