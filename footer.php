@@ -1,7 +1,7 @@
 <div class="mt-10 pt-10 pb-10 bg-[<?= get_theme_mod('theme_color_background', '#184CDA'); ?>]">
-    <div class="mx-auto container flex justify-between gap-10">
+    <div class="mx-auto container px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <!-- Coluna 1 -->
-        <div>
+        <div class="text-center sm:text-left">
             <div>
                 <?php
                 if (has_custom_logo()) {
@@ -14,10 +14,10 @@
                     <?= get_bloginfo('description'); ?>
                 </p>
             </div>
-            <div class="flex pt-2">
+            <div class="flex pt-2 flex-wrap items-center justify-center sm:justify-start gap-3">
                 <?php if (get_theme_mod('theme_social_facebook')): ?>
                     <a href="<?= esc_url(get_theme_mod('theme_social_facebook')); ?>" target="_blank"
-                        class="text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>] hover:text-white mr-3">
+                        class="text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>] hover:text-white">
                         <img class="w-8 h-8 bg-white rounded-lg p-2"
                             src="<?= get_template_directory_uri(); ?>/assets/images/facebook.png" alt="facebook">
                     </a>
@@ -25,7 +25,7 @@
 
                 <?php if (get_theme_mod('theme_social_instagram')): ?>
                     <a href="<?= esc_url(get_theme_mod('theme_social_instagram')); ?>" target="_blank"
-                        class="text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>] hover:text-white mr-3">
+                        class="text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>] hover:text-white">
                         <img class="w-8 h-8 bg-white rounded-lg p-2"
                             src="<?= get_template_directory_uri(); ?>/assets/images/instagram.png" alt="instagram">
                     </a>
@@ -33,7 +33,7 @@
 
                 <?php if (get_theme_mod('theme_social_twitter')): ?>
                     <a href="<?= esc_url(get_theme_mod('theme_social_twitter')); ?>" target="_blank"
-                        class="text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>] hover:text-white mr-3">
+                        class="text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>] hover:text-white">
                         <img class="w-8 h-8 bg-white rounded-lg p-2"
                             src="<?= get_template_directory_uri(); ?>/assets/images/twitter.png" alt="twitter">
                     </a>
@@ -41,7 +41,7 @@
 
                 <?php if (get_theme_mod('theme_social_linkedin')): ?>
                     <a href="<?= esc_url(get_theme_mod('theme_social_linkedin')); ?>" target="_blank"
-                        class="text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>] hover:text-white mr-3">
+                        class="text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>] hover:text-white">
                         <img class="w-8 h-8 bg-white rounded-lg p-2"
                             src="<?= get_template_directory_uri(); ?>/assets/images/linkedin.png" alt="linkedin">
                     </a>
@@ -50,7 +50,7 @@
         </div>
 
         <!-- Coluna 2 -->
-        <div>
+        <div class="text-center sm:text-left">
             <div>
                 <h3 class="text-lg font-semibold text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>]">
                     Navegação
@@ -69,7 +69,7 @@
         </div>
 
         <!-- Coluna 3 -->
-        <div>
+        <div class="text-center sm:text-left">
             <div>
                 <h3 class="text-lg font-semibold text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>]">
                     Páginas
@@ -88,7 +88,7 @@
         </div>
 
         <!-- Coluna 4 -->
-        <div>
+        <div class="text-center sm:text-left">
             <div>
                 <h3 class="text-lg font-semibold text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>]">
                     Contato
