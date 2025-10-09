@@ -16,12 +16,12 @@ get_header();
         <?php echo do_shortcode(get_theme_mod('theme_shortcode_slider')); ?>
     </section>
     <?php if (is_active_sidebar('services-section')): ?>
-        <section class="container mx-auto flex justify-center text-center pt-20">
+        <section class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center text-center pt-20">
             <?php dynamic_sidebar('services-section'); ?>
         </section>
     <?php endif; ?>
-    <div class="container mx-auto">
-        <div class="grid grid-cols-3 grid-rows-2 gap-6 pt-10">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
             <?php if ($services): ?>
                 <?php foreach ($services as $service): ?>
                     <?php
@@ -31,7 +31,7 @@ get_header();
                     $service_link = get_post_meta($service->ID, '_service_link', true);
                     $service_url = $service_link ?: get_permalink($service->ID);
                     ?>
-                    <div class="bg-white p-6 rounded-lg shadow-md gap-4">
+                    <div class="bg-white p-6 rounded-lg shadow-md gap-4 h-full flex flex-col">
                         <div>
                             <?php if ($icon_url): ?>
                                 <img class="p-3 rounded-lg" style="background-color: <?= esc_attr($bg_color); ?>"
@@ -77,12 +77,12 @@ get_header();
     ?>
 
     <?php if (is_active_sidebar('news-updates')): ?>
-        <section class="container mx-auto flex justify-center text-center pt-20">
+        <section class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center text-center pt-20">
             <?php dynamic_sidebar('news-updates'); ?>
         </section>
     <?php endif; ?>
 
-    <div class="container mx-auto flex gap-5 pt-10">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
         <?php if ($news_updates):
             foreach ($news_updates as $post):
                 $thumbnail_url = get_the_post_thumbnail_url($post->ID, 'medium');
@@ -91,14 +91,14 @@ get_header();
                 $excerpt = get_the_excerpt($post->ID);
                 $date = get_the_date('d/m/Y', $post->ID);
                 ?>
-                <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition flex flex-col relative">
+                <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition flex flex-col h-full relative">
                     <div class="relative">
                         <?php if ($thumbnail_url): ?>
                             <img src="<?= esc_url($thumbnail_url); ?>" alt="Foto de profissional"
                                 class="w-full h-48 object-cover rounded-t-xl" />
                         <?php endif; ?>
                     </div>
-                    <div class="p-4">
+                    <div class="p-4 flex-1">
                         <h2 class="font-semibold text-gray-800 text-base mt-3">
                             <?= esc_html($title); ?>
                         </h2>
