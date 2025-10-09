@@ -28,6 +28,8 @@ get_header();
                     // Obter os meta campos personalizados
                     $icon_url = get_post_meta($service->ID, '_service_icon', true);
                     $bg_color = get_post_meta($service->ID, '_service_icon_bg_color', true) ?: '#3B82F6';
+                    $service_link = get_post_meta($service->ID, '_service_link', true);
+                    $service_url = $service_link ?: get_permalink($service->ID);
                     ?>
                     <div class="bg-white p-6 rounded-lg shadow-md gap-4">
                         <div>
@@ -42,10 +44,15 @@ get_header();
                             <?php endif; ?>
                         </div>
                         <div>
-                            <h3 class="font-semibold text-lg mb-2 pt-2"><?= esc_html($service->post_title); ?></h3>
+                            <h3 class="font-semibold text-lg mb-2 pt-2"><a href="<?= esc_url($service_url); ?>"
+                                    class="hover:underline"><?= esc_html($service->post_title); ?></a></h3>
                             <p class="text-gray-600">
                                 <?= esc_html($service->post_excerpt ?: wp_trim_words($service->post_content, 20)); ?>
                             </p>
+                            <div class="mt-3">
+                                <a href="<?= esc_url($service_url); ?>"
+                                    class="text-blue-600 font-medium hover:underline text-sm">Saiba mais</a>
+                            </div>
                         </div>
                     </div>
                 <?php endforeach; ?>

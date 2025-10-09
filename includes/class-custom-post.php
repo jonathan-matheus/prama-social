@@ -62,6 +62,7 @@ class Custom_Post
 
         $icon = get_post_meta($post->ID, '_service_icon', true);
         $bg_color = get_post_meta($post->ID, '_service_icon_bg_color', true);
+        $service_link = get_post_meta($post->ID, '_service_link', true);
 
         ?>
         <table class="form-table">
@@ -75,6 +76,17 @@ class Custom_Post
                     <p class="description">
                         <?php _e('Enter the URL of the icon image (SVG, PNG, JPG)', 'pragmasocial'); ?>
                     </p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    <label for="service_link"><?php _e('Service Link URL', 'pragmasocial'); ?></label>
+                </th>
+                <td>
+                    <input type="url" id="service_link" name="service_link" value="<?php echo esc_attr($service_link); ?>"
+                        class="regular-text" placeholder="https://example.com/pagina-do-servico" />
+                    <p class="description">
+                        <?php _e('Optional: Enter an external or internal URL for this service.', 'pragmasocial'); ?></p>
                 </td>
             </tr>
             <tr>
@@ -116,6 +128,11 @@ class Custom_Post
         // Save icon field
         if (isset($_POST['service_icon'])) {
             update_post_meta($post_id, '_service_icon', esc_url_raw($_POST['service_icon']));
+        }
+
+        // Save service link field
+        if (isset($_POST['service_link'])) {
+            update_post_meta($post_id, '_service_link', esc_url_raw($_POST['service_link']));
         }
 
         // Save background color field
