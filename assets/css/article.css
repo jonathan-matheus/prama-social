@@ -1,0 +1,82 @@
+/* Tipografia básica aplicada apenas ao conteúdo dentro de <article> */
+article {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #374151; /* gray-700 */
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  color: #111827; /* gray-900 */
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 1.25rem 0 0.75rem;
+}
+
+article h1 {
+  font-size: 2rem;
+}
+article h2 {
+  font-size: 1.5rem;
+}
+article h3 {
+  font-size: 1.25rem;
+}
+
+article p {
+  margin: 0.85rem 0;
+}
+
+article a {
+  color: #2563eb; /* blue-600 */
+  text-decoration: none;
+}
+
+article a:hover {
+  text-decoration: underline;
+}
+
+article ul,
+article ol {
+  padding-left: 1.25rem;
+  margin: 0.85rem 0;
+}
+
+article li {
+  margin: 0.35rem 0;
+}
+
+article blockquote {
+  border-left: 4px solid #e5e7eb; /* gray-200 */
+  padding-left: 1rem;
+  color: #4b5563; /* gray-600 */
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.375rem; /* rounded-md */
+}
+
+article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+article th,
+article td {
+  border: 1px solid #e5e7eb; /* gray-200 */
+  padding: 0.5rem 0.75rem;
+}
+
+article th {
+  background: #f9fafb; /* gray-50 */
+  text-align: left;
+}

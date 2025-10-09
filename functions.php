@@ -33,3 +33,15 @@ function theme_setup()
 }
 
 theme_setup();
+
+// Enfileira CSS básico apenas para páginas e posts (conteúdo dentro de <article>)
+add_action('wp_enqueue_scripts', function () {
+    if (is_page() || is_single()) {
+        wp_enqueue_style(
+            'pragmasocial-article',
+            get_template_directory_uri() . '/assets/css/article.css',
+            [],
+            filemtime(get_template_directory() . '/assets/css/article.css')
+        );
+    }
+});
