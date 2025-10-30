@@ -24,8 +24,9 @@ $css_url = get_template_directory_uri() . '/src/output.css';
                     wp_nav_menu([
                         'theme_location' => 'header-menu',
                         'container' => 'nav',
-                        'container_class' => 'header-menu-class',
+                        'container_class' => 'header-menu-class navigation-menu',
                         'menu_class' => 'flex gap-4 text-sm',
+                        'depth' => 3,
                     ]);
                     ?>
                 </div>
@@ -54,7 +55,10 @@ $css_url = get_template_directory_uri() . '/src/output.css';
                 <?php
                 wp_nav_menu([
                     'theme_location' => 'primary-menu',
+                    'container' => 'nav',
+                    'container_class' => 'navigation-menu',
                     'menu_class' => 'flex flex-col sm:flex-row flex-wrap justify-center sm:justify-start sm:gap-4 text-base gap-4 text-base',
+                    'depth' => 3,
                 ]);
                 ?>
             </div>

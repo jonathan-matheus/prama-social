@@ -45,3 +45,23 @@ add_action('wp_enqueue_scripts', function () {
         );
     }
 });
+
+// Enfileira CSS e JS para menus de navegação
+add_action('wp_enqueue_scripts', function () {
+    // CSS para menus
+    wp_enqueue_style(
+        'pragmasocial-menu',
+        get_template_directory_uri() . '/assets/css/menu.css',
+        [],
+        filemtime(get_template_directory() . '/assets/css/menu.css')
+    );
+
+    // JavaScript para menus
+    wp_enqueue_script(
+        'pragmasocial-menu-js',
+        get_template_directory_uri() . '/assets/js/menu.js',
+        [],
+        filemtime(get_template_directory() . '/assets/js/menu.js'),
+        true
+    );
+});

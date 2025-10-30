@@ -1,0 +1,160 @@
+/* Estilos para navegação com submenus */
+.navigation-menu {
+  position: relative;
+}
+
+.navigation-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigation-menu ul ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 0.375rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  min-width: 200px;
+  z-index: 1000;
+  border: 1px solid #e5e7eb;
+}
+
+.navigation-menu ul ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.navigation-menu li {
+  position: relative;
+}
+
+.navigation-menu li:hover > ul,
+.navigation-menu li:focus-within > ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.navigation-menu ul ul li {
+  width: 100%;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.navigation-menu ul ul li:last-child {
+  border-bottom: none;
+}
+
+.navigation-menu ul ul a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #374151 !important;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  border-radius: 0;
+}
+
+.navigation-menu ul ul a:hover,
+.navigation-menu ul ul a:focus {
+  background-color: #f9fafb;
+  color: #1f2937 !important;
+}
+
+/* Indicador de submenu */
+.navigation-menu .menu-item-has-children > a::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  border-top: 4px solid currentColor;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  transition: transform 0.2s ease;
+}
+
+.navigation-menu .menu-item-has-children:hover > a::after,
+.navigation-menu .menu-item-has-children:focus-within > a::after {
+  transform: rotate(180deg);
+}
+
+/* Para submenus de terceiro nível */
+.navigation-menu ul ul .menu-item-has-children > a::after {
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid currentColor;
+  transform: rotate(0deg);
+}
+
+.navigation-menu ul ul .menu-item-has-children:hover > a::after,
+.navigation-menu ul ul .menu-item-has-children:focus-within > a::after {
+  transform: rotate(180deg);
+}
+
+/* Responsivo para dispositivos móveis */
+@media (max-width: 768px) {
+  .navigation-menu ul {
+    flex-direction: column;
+  }
+
+  .navigation-menu ul ul {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+    min-width: auto;
+  }
+
+  .navigation-menu ul ul ul {
+    left: 0;
+    padding-left: 2rem;
+  }
+
+  .navigation-menu ul ul a {
+    color: inherit !important;
+    padding: 0.5rem 0;
+    font-size: inherit;
+  }
+
+  .navigation-menu .menu-item-has-children > a::after {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid currentColor;
+  }
+
+  .navigation-menu ul ul .menu-item-has-children > a::after {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid currentColor;
+  }
+}
+
+/* Estilos específicos para o header menu (menu superior) */
+.header-menu-class ul ul {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.header-menu-class ul ul a {
+  color: #2d3748 !important;
+  font-size: 0.875rem;
+}
+
+.header-menu-class ul ul a:hover {
+  background-color: #edf2f7;
+}

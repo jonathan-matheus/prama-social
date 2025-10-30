@@ -1,0 +1,96 @@
+/* Arquivo para criação do output.css caso não exista */
+/* Este arquivo serve como fallback para o CSS do tema */
+
+/* Reset básico para menus */
+.navigation-menu * {
+  box-sizing: border-box;
+}
+
+/* Garante que os estilos dos menus não sejam sobrescritos */
+.navigation-menu ul ul {
+  position: absolute !important;
+  display: block !important;
+}
+
+/* Para garantir que funcione mesmo sem Tailwind */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Classes de utilidade básicas se Tailwind não carregar */
+.flex {
+  display: flex;
+}
+.gap-4 > * + * {
+  margin-left: 1rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+}
+.text-base {
+  font-size: 1rem;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.items-center {
+  align-items: center;
+}
+.pt-2 {
+  padding-top: 0.5rem;
+}
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+.pt-5 {
+  padding-top: 1.25rem;
+}
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .md\\:block {
+    display: block;
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\\:flex-row {
+    flex-direction: row;
+  }
+  .sm\\:justify-start {
+    justify-content: flex-start;
+  }
+  .sm\\:gap-4 > * + * {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\\:flex-row {
+    flex-direction: row;
+  }
+}
