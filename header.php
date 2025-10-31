@@ -50,7 +50,11 @@ $css_url = get_template_directory_uri() . '/src/output.css';
                 }
                 ?>
             </div>
-
+            <div>
+                <?php get_search_form(); ?>
+            </div>
+        </div>
+        <div class="container justify-center pb-5">
             <div class="text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>]">
                 <?php
                 wp_nav_menu([
@@ -61,10 +65,6 @@ $css_url = get_template_directory_uri() . '/src/output.css';
                     'depth' => 3,
                 ]);
                 ?>
-            </div>
-
-            <div>
-                <?php get_search_form(); ?>
             </div>
         </div>
     </header>
