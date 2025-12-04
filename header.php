@@ -16,7 +16,7 @@ $css_url = get_template_directory_uri() . '/src/output.css';
 
 <body <?php body_class(); ?>>
     <header class="bg-[<?= get_theme_mod('theme_color_background', '#184CDA'); ?>]">
-        <div class="hidden md:block bg-[<?= get_theme_mod('theme_color_secondary', '#F1F5F9'); ?>]">
+        <div class="md:block bg-[<?= get_theme_mod('theme_color_secondary', '#F1F5F9'); ?>]">
             <div
                 class="container flex justify-between pt-2 pb-2 mx-auto text-[<?= get_theme_mod('theme_color_text-primary', '#2d3748'); ?>]">
                 <div>
@@ -32,8 +32,8 @@ $css_url = get_template_directory_uri() . '/src/output.css';
                 </div>
                 <div
                     class="flex items-center text-sm text-[<?= get_theme_mod('theme_color_text-primary', '#2d3748'); ?>]">
-                    <?= get_theme_mod('contact_phone', ''); ?> |
-                    <?= get_theme_mod('contact_email', ''); ?>
+                    <?= get_theme_mod('theme_phone_contact', ''); ?> |
+                    <?= get_theme_mod('theme_email_contact', ''); ?>
                 </div>
             </div>
         </div>

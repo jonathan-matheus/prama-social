@@ -124,6 +124,19 @@ get_header();
         endif;
         ?>
     </div>
+
+    <?php if ($news_updates): ?>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center pt-10 pb-10">
+            <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>"
+                class="inline-flex items-center px-6 py-3 bg-[<?= get_theme_mod('theme_color_background', '#184CDA'); ?>] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity shadow-md hover:shadow-lg">
+                Ver mais notícias
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </a>
+        </div>
+    <?php endif; ?>
 </main>
 <?php
 get_footer();

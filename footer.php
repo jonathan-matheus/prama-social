@@ -82,6 +82,7 @@
                     'container' => 'nav',
                     'container_class' => '',
                     'menu_class' => 'flex flex-col gap-2 text-sm text-[<?= get_theme_mod(\'theme_color_text-tertiary\', \'#ffffff\'); ?>]',
+                    'depth' => 1,
                 ]);
                 ?>
             </div>
