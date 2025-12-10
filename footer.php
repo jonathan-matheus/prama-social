@@ -72,18 +72,12 @@
         <div class="text-center sm:text-left">
             <div>
                 <h3 class="text-lg font-semibold text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>]">
-                    Páginas
+                    Atendimento
                 </h3>
             </div>
             <div class="mt-4 text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>]">
-                <?php
-                wp_nav_menu([
-                    'theme_location' => 'primary-menu',
-                    'container' => 'nav',
-                    'container_class' => '',
-                    'menu_class' => 'flex flex-col gap-2 text-sm text-[<?= get_theme_mod(\'theme_color_text-tertiary\', \'#ffffff\'); ?>]',
-                    'depth' => 1,
-                ]);
+                <?=
+                    get_theme_mod('theme_service', 'Serviço não configurado');
                 ?>
             </div>
         </div>

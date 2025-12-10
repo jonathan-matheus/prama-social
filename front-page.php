@@ -81,7 +81,14 @@ get_header();
             <?php dynamic_sidebar('news-updates'); ?>
         </section>
     <?php endif; ?>
-
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
+        <div class="text-center">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[<?= get_theme_mod('theme_color_text-primary', '#2d3748'); ?>] mb-4">
+                Notícias e Atualizações
+            </h1>
+            <div class="w-24 h-1 bg-[<?= get_theme_mod('theme_color_background', '#184CDA'); ?>] mx-auto mt-4 rounded-full"></div>
+        </div>
+    </div>
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
         <?php if ($news_updates):
             foreach ($news_updates as $post):
