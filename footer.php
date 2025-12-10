@@ -1,5 +1,5 @@
 <div class="mt-10 pt-10 pb-10 bg-[<?= get_theme_mod('theme_color_background', '#184CDA'); ?>]">
-    <div class="mx-auto container px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div class="mx-auto container px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
         <!-- Coluna 1 -->
         <div class="text-center sm:text-left">
             <div>
@@ -68,18 +68,28 @@
             </div>
         </div>
 
-        <!-- Coluna 3 -->
         <div class="text-center sm:text-left">
             <div>
                 <h3 class="text-lg font-semibold text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>]">
-                    Atendimento
+                    Paginas
                 </h3>
             </div>
             <div class="mt-4 text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>]">
-                <?=
-                    get_theme_mod('theme_service', 'Serviço não configurado');
+                <?php
+                wp_nav_menu([
+                    'theme_location' => 'footer-menu',
+                    'container' => 'nav',
+                    'container_class' => '',
+                    'menu_class' => 'flex flex-col gap-2 text-sm text-[<?= get_theme_mod(\'theme_color_text-tertiary\', \'#ffffff\'); ?>]',
+                ]);
                 ?>
             </div>
+        </div>
+
+
+        <!-- Coluna 3 -->
+        <div class="text-center sm:text-left">
+
         </div>
 
         <!-- Coluna 4 -->
@@ -99,6 +109,17 @@
                 <p class="text-sm text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>] mt-2">
                     Email: <?= get_theme_mod('theme_email_contact', 'Email não configurado'); ?>
                 </p>
+            </div>
+            <div>
+                <h3
+                    class="text-lg mt-10 font-semibold text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>]">
+                    Atendimento
+                </h3>
+            </div>
+            <div class="mt-4 text-[<?= get_theme_mod('theme_color_text-tertiary', '#ffffff'); ?>]">
+                <?=
+                    get_theme_mod('theme_service', 'Serviço não configurado');
+                ?>
             </div>
         </div>
     </div>
