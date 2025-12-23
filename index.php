@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
-<main>
-    <h1>Conteúdo Principal</h1>
+<main class="container mx-auto px-4">
     <?php if (have_posts()): ?>
         <?php while (have_posts()):
             the_post(); ?>

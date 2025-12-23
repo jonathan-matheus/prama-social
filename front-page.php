@@ -10,7 +10,7 @@ $services = get_posts([
 
 get_header();
 ?>
-<main class="bg-[<?= get_theme_mod('theme_color_background-alt', '#F8FAFC'); ?>] min-h-screen">
+<main class="min-h-screen">
     <!-- Slider -->
     <section class="hero-slider">
         <?php echo do_shortcode(get_theme_mod('theme_shortcode_slider')); ?>
@@ -83,10 +83,13 @@ get_header();
     <?php endif; ?>
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
         <div class="text-center">
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[<?= get_theme_mod('theme_color_text-primary', '#2d3748'); ?>] mb-4">
+            <h1
+                class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[<?= get_theme_mod('theme_color_text-primary', '#2d3748'); ?>] mb-4">
                 Notícias e Atualizações
             </h1>
-            <div class="w-24 h-1 bg-[<?= get_theme_mod('theme_color_background', '#184CDA'); ?>] mx-auto mt-4 rounded-full"></div>
+            <div
+                class="w-24 h-1 bg-[<?= get_theme_mod('theme_color_background', '#184CDA'); ?>] mx-auto mt-4 rounded-full">
+            </div>
         </div>
     </div>
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
@@ -143,6 +146,26 @@ get_header();
                 </svg>
             </a>
         </div>
+    <?php endif; ?>
+
+    <!-- Seção de Agenda -->
+    <?php if (get_theme_mod('theme_shortcode_agenda')): ?>
+        <section class="mt-20 pt-20 pb-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <h2
+                        class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[<?= get_theme_mod('theme_color_text-primary', '#2d3748'); ?>] mb-4">
+                        Agenda de Eventos
+                    </h2>
+                    <div
+                        class="w-24 h-1 bg-[<?= get_theme_mod('theme_color_background', '#184CDA'); ?>] mx-auto mt-4 rounded-full">
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <?php echo do_shortcode(get_theme_mod('theme_shortcode_agenda')); ?>
+                </div>
+            </div>
+        </section>
     <?php endif; ?>
 </main>
 <?php

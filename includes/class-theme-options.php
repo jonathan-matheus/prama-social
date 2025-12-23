@@ -20,6 +20,7 @@ class Theme_Options
         // Lista de campos de texto para redes sociais e slider
         $fields = [
             'theme_shortcode_slider' => __('Slider Shortcode', 'pragmasocial'),
+            'theme_shortcode_agenda' => __('Agenda Shortcode', 'pragmasocial'),
             'theme_service' => __('Service', 'pragmasocial'),
             'theme_email_contact' => __('Contact Email', 'pragmasocial'),
             'theme_phone_contact' => __('Contact Phone', 'pragmasocial'),
