@@ -22,7 +22,7 @@
                         <?php if (has_post_thumbnail()): ?>
                             <a href="<?php the_permalink(); ?>" class="block overflow-hidden">
                                 <img src="<?php the_post_thumbnail_url('medium_large'); ?>" alt="<?php the_title_attribute(); ?>"
-                                    class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" />
+                                    class="w-full h-48 object-contain hover:scale-105 transition-transform duration-300" />
                             </a>
                         <?php else: ?>
                             <a href="<?php the_permalink(); ?>" class="block">
@@ -73,17 +73,6 @@
                                     <?php the_title(); ?>
                                 </a>
                             </h2>
-
-                            <!-- Excerpt -->
-                            <div class="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
-                                <?php
-                                if (has_excerpt()) {
-                                    the_excerpt();
-                                } else {
-                                    echo wp_trim_words(get_the_content(), 20, '...');
-                                }
-                                ?>
-                            </div>
 
                             <!-- Link "Leia Mais" -->
                             <a href="<?php the_permalink(); ?>"
