@@ -21,6 +21,7 @@ class Theme_Options
         $fields = [
             'theme_shortcode_slider' => __('Slider Shortcode', 'pragmasocial'),
             'theme_shortcode_agenda' => __('Agenda Shortcode', 'pragmasocial'),
+            'theme_shortcode_newsletter' => __('Newsletter Shortcode (Footer)', 'pragmasocial'),
             'theme_service' => __('Service', 'pragmasocial'),
             'theme_email_contact' => __('Contact Email', 'pragmasocial'),
             'theme_phone_contact' => __('Contact Phone', 'pragmasocial'),
@@ -44,5 +45,29 @@ class Theme_Options
                 'type' => 'text',
             ]);
         }
+
+        // Campo textarea para texto acima do formulário no footer
+        $wp_customize->add_setting('theme_footer_newsletter_text', [
+            'default' => '',
+            'sanitize_callback' => 'wp_kses_post',
+        ]);
+
+        $wp_customize->add_control('theme_footer_newsletter_text', [
+            'label' => __('Footer Newsletter Text (above form)', 'pragmasocial'),
+            'section' => 'theme_options',
+            'type' => 'textarea',
+        ]);
+
+        // Campo textarea para bloco de informações de contato do footer
+        $wp_customize->add_setting('theme_footer_contact_block', [
+            'default' => '',
+            'sanitize_callback' => 'wp_kses_post',
+        ]);
+
+        $wp_customize->add_control('theme_footer_contact_block', [
+            'label' => __('Footer Contact Block (HTML allowed)', 'pragmasocial'),
+            'section' => 'theme_options',
+            'type' => 'textarea',
+        ]);
     }
 }
