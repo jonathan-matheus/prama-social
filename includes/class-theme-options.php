@@ -30,6 +30,7 @@ class Theme_Options
             'theme_social_instagram' => __('Instagram URL', 'pragmasocial'),
             'theme_social_twitter' => __('Twitter/X URL', 'pragmasocial'),
             'theme_social_linkedin' => __('LinkedIn URL', 'pragmasocial'),
+            'theme_social_youtube' => __('YouTube URL', 'pragmasocial'),
             // Adicione mais campos conforme necessário
         ];
 
