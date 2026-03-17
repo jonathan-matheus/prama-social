@@ -97,7 +97,7 @@ get_header();
             foreach ($news_updates as $post):
                 $thumbnail_url = get_the_post_thumbnail_url($post->ID, 'medium');
                 $permalink = get_permalink($post->ID);
-                $title = 'CRESS-BA promove capacitação sobre ética profissional para assistentes sociais';
+                $title = get_the_title($post->ID);
                 $excerpt = get_the_excerpt($post->ID);
                 $date = get_the_date('d/m/Y', $post->ID);
                 ?>
